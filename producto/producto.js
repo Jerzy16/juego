@@ -1,0 +1,1 @@
+// Aquí puedes agregar la lógica de interactividad para la sección de producto 

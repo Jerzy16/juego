@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape del Dragón Matemático</title>
+    <link rel="stylesheet" href="css/style.css" href="css/dragon.css">
+</head>
+<body>
+    <!-- Pantalla de inicio -->
+    <div class="start-screen" id="startScreen">
+        <h1>🐉 Escape del Dragón Matemático  </h1>
+        <p>Un dragón mágico te persigue por el bosque encantado. Debes tocar los círculos mágicos para resolver acertijos matemáticos y mantenerlo alejado.</p>
+        <p><strong>🎯 Objetivo:</strong> Sobrevive el mayor tiempo posible y consigue el puntaje más alto.</p>
+        <p><strong>❤️ Vidas:</strong> Tienes 5 vidas. 3 aciertos seguidos te dan 1 vida extra.</p>
+        <p><strong>🎮 Controles:</strong> Usa las flechas o WASD para moverte. Toca los círculos dorados.</p>
+        <button class="start-btn" onclick="startGame()">¡Comenzar Aventura!</button>
+    </div>
+<!-- Contenedor del juego -->
+    <div class="game-container hidden" id="gameContainer">
+        <div class="hud">
+            <div class="lives">❤️ Vidas: <span id="livesCount">5</span></div>
+            <div class="score">⭐ Puntaje: <span id="scoreCount">0</span></div>
+            <div class="streak">🔥 Racha: <span id="streakCount">0</span></div>
+        </div>
+<!-- Contenedor del juego -->
+        <div class="debug hidden" id="debugInfo">
+            <div>Dragon X: <span id="dragonX">0</span></div>
+            <div>Player X: <span id="playerX">0</span></div>
+            <div>Distance: <span id="distance">0</span></div>
+            <div>Circles: <span id="circleCount">0</span></div>
+        </div>
+
+        <div class="hollow-knight" id="player">
+            <div class="hk-head">
+                <div class="hk-horn left"></div>
+                <div class="hk-horn right"></div>
+                <div class="hk-eye left"></div>
+                <div class="hk-eye right"></div>
+            </div>
+            <div class="hk-body"></div>
+            <div class="hk-cape"></div>
+        </div>
+
+        <div class="dragon" id="dragon">
+        <div class="dragon-eye"></div>
+        <div class="dragon-tail"></div>            
+        </div>
+        
+    </div>
+<!-- Contenedor de preguntas y respuestas -->
+    <div class="question-container hidden" id="questionContainer">
+        <div class="question" id="questionText"></div>
+        <div class="timer-bar">
+            <div class="timer-fill" id="timerFill"></div>
+        </div>
+        <div class="answers" id="answersContainer"></div>
+    </div>
+    <!-- Paredes -->
+<div class="wall-horizontal"></div>
+<div class="wall-vertical"></div>
+<div class="wall-block" style="bottom: 150px; left: 300px;"></div>
+<div class="wall-block" style="bottom: 210px; left: 300px;"></div>
+<!-- Contenedor de círculos mágicos -->
+    <div class="game-over hidden" id="gameOverScreen">
+        <h2>🐉 ¡El dragón te atrapó!</h2>
+        <p>¡Buen intento!</p>
+        <p>Puntaje final: <span id="finalScore">0</span></p>
+        <button class="restart-btn" onclick="restartGame()">🔄 Jugar de Nuevo</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

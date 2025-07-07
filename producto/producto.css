@@ -1,0 +1,56 @@
+body {
+  font-family: 'Fredoka One', cursive;
+  background: #f8f2d9;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #ffa600;
+  color: #222;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 3px solid #222;
+}
+
+.producto-card {
+  display: flex;
+  align-items: center;
+  background: #fffbe6;
+  border: 2px solid #ffa600;
+  border-radius: 20px;
+  box-shadow: 4px 4px 0 #2222;
+  padding: 24px;
+  margin: 32px auto;
+  max-width: 500px;
+  gap: 24px;
+}
+
+.producto-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid #ffa600;
+}
+
+.producto-info {
+  flex: 1;
+}
+
+.producto-info h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.producto-info p {
+  margin: 0 0 12px 0;
+  color: #444;
+}
+
+.producto-precio {
+  font-size: 1.2rem;
+  color: #ffa600;
+  font-weight: bold;
+} 

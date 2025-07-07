@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+/* */
+body {
+  margin: 0;
+  background: #f8f2d9;
+  font-family: 'Fredoka One', cursive;
+}
+
+header {
+  width: 100%;
+  background: #f8f2d9;
+  border-bottom: 3px solid #222;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+}
+
+nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #222;
+  font-size: 1.3rem;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 3px;
+  background: #222;
+  margin: 0 auto;
+  margin-top: 2px;
+  border-radius: 2px;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #F59D39;  
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+.buy-tickets {
+  background: #F59D39;
+  color: #222;
+  font-size: 1.3rem;
+  padding: 12px 32px;
+  border-radius: 30px;
+  border: 3px solid #222;
+  box-shadow: 4px 4px 0 #222;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.buy-tickets:hover {
+  background: #be905a;
+}
+
+main {
+  padding-top: 120px;
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.date-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.emoji {
+  font-size: 2.5rem;
+  background: #ffd700;
+  border: 3px dashed #a67c00;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.date-text {
+  background: #ff7f32;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px 24px;
+  border-radius: 16px;
+  border: 3px solid #222;
+  box-shadow: 2px 2px 0 #222;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #222;
+  margin: 0;
+  margin-bottom: 20px;
+  text-shadow: 4px 4px 0 #fff, 8px 8px 0 #222;
+  display: inline-block;
+  background: #fff;
+  border-radius: 40px;
+  padding: 0 20px;
+  border: 3px solid #222;
+  box-shadow: 6px 6px 0 #222;
+}
+
+h2 {
+  font-size: 3rem;
+  color: #fff;
+  background: #ffa600;
+  text-shadow: 2px 2px 0 #222;
+  margin: 20px 0;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 100px;
+  padding: 20px 50px;
+  border: 3px solid #222;
+  box-shadow: 6px 6px 0 #222;
+  transform: rotate(-3deg);
+  margin: 50px 0 0 0;
+}
+
+.rainbow {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 350px;
+  z-index: 0;
+  background: none;
+}
