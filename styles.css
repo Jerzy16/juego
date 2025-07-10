@@ -1,155 +1,159 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-/* */
+
 body {
   margin: 0;
-  background: #f8f2d9;
-  font-family: 'Fredoka One', cursive;
+  padding: 0;
+  color: #f5f5f5;
+  font-family: sans-serif;
 }
-
-header {
-  width: 100%;
-  background: #f8f2d9;
-  border-bottom: 3px solid #222;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
-
+/* menu nav bar  */
 nav {
+  font-family: 'Shojumaru', cursive;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 16px 40px;
+  justify-content: flex-start; /* Asegura separación entre menú y botón */
+  background-color: #222;
+  padding: 15px 15px;
+  flex-wrap: wrap;
+  position: fixed; /* Menú siempre visible arriba */
+  top: 0;
+  gap: 850px;
+  left:   0;
+  width: 100%;
+  z-index: 1000;
 }
-
+/* menu nav bar */
 nav ul {
-  display: flex;
-  gap: 32px;
   list-style: none;
+  display: flex;
+  gap: 30px;
   margin: 0;
   padding: 0;
 }
-
+/* menu nav bar */
 nav ul li a {
   text-decoration: none;
-  color: #222;
-  font-size: 1.3rem;
+   color: #f59e0b;
+  font-weight: bold;
   position: relative;
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), color 0.2s;
 }
-
+/* menu */
 nav ul li a::after {
-  content: '';
-  display: block;
-  width: 20px;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
   height: 3px;
-  background: #222;
-  margin: 0 auto;
-  margin-top: 2px;
+  width: 0;
+  background: #f59e0b;
   border-radius: 2px;
-  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: width 0.3s cubic-bezier(.4,2,.6,1);
 }
-
+/* menu hover  */
+nav ul li a:hover {
+  transform: translateX(10px);
+  color: #fff;
+}
 nav ul li a:hover::after {
   width: 100%;
 }
 
+/* logo */
 .logo {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-family: 'Shojumaru', cursive;
+  font-size: 2rem;
+  color: #f59e0b;
+  text-align: center;
+  text-shadow: 2px 2px 6px #696666;
   letter-spacing: 2px;
-  color: #F59D39;  
-  border-radius: 20px;
-  padding: 0 20px;
+  line-height: 1.2;
+  margin: 10px 0;
 }
 
+/* boton buy tickets  */
 .buy-tickets {
-  background: #F59D39;
-  color: #222;
-  font-size: 1.3rem;
-  padding: 12px 32px;
-  border-radius: 30px;
-  border: 3px solid #222;
-  box-shadow: 4px 4px 0 #222;
-  text-decoration: none;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 8px 18px;
+  background: transparent;
+  color: #f59e0b;
+  border: 2px solid #f59e0b;
+  border-radius: 6px;
   font-weight: bold;
-  transition: background 0.2s;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  box-sizing: border-box;
 }
 
 .buy-tickets:hover {
-  background: #be905a;
+  background: #f59e0b;
+  color: #fff;
 }
 
-main {
-  padding-top: 120px;
-  text-align: center;
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .buy-tickets {
+    align-self: flex-end;
+    margin-top: 10px;
+    
+  }
 }
 
 .date-badge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 40px;
-}
-
-.emoji {
-  font-size: 2.5rem;
-  background: #ffd700;
-  border: 3px dashed #a67c00;
-  border-radius: 50%;
-  padding: 10px;
-}
-
-.date-text {
-  background: #ff7f32;
-  color: #fff;
+  margin-top: 20px;
+  text-align: center;
   font-size: 1.2rem;
-  padding: 10px 24px;
-  border-radius: 16px;
-  border: 3px solid #222;
-  box-shadow: 2px 2px 0 #222;
 }
 
-h1 {
-  font-size: 4rem;
-  color: #222;
-  margin: 0;
-  margin-bottom: 20px;
-  text-shadow: 4px 4px 0 #fff, 8px 8px 0 #222;
-  display: inline-block;
-  background: #fff;
-  border-radius: 40px;
-  padding: 0 20px;
-  border: 3px solid #222;
-  box-shadow: 6px 6px 0 #222;
+h2 span {
+  display: block;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 10px;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  background-color: #f59e0b;
+  text-align: justify;
+}
+/* Fondo de selva/cielo */
+.hero-section {
+  margin-top: 70px; /* Espacio para el menú fijo, ajusta según la altura real del nav */
+  position: relative;
+  width: 100%;
+  height: 1000px; 
+  background: url('imagen/menu/paisaje.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 8px solid #222;
 }
 
-h2 {
-  font-size: 3rem;
-  color: #fff;
-  background: #ffa600;
-  text-shadow: 2px 2px 0 #222;
-  margin: 20px 0;
-  padding: 10px 20px;
-  display: inline-block;
-  border-radius: 100px;
-  padding: 20px 50px;
-  border: 3px solid #222;
-  box-shadow: 6px 6px 0 #222;
-  transform: rotate(-3deg);
-  margin: 50px 0 0 0;
-}
-
-.rainbow {
+/* dragon gif izquierda */
+.dragon-gif-left {
   position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 350px;
-  z-index: 0;
-  background: none;
+  top: 60px;
+  left: 5%;
+  width: 420px;
+  height: auto;
+  z-index: 10;
+  pointer-events: none;
+}
+/* dragon gif derecha  */
+.dragon-gif-right {
+  position: absolute;
+  top: 60px;
+  right: 5%;
+  width: 420px;
+  height: auto;
+  z-index: 10;
+  pointer-events: none;
+  transform: scaleX(-1); /* Voltea el dragón para que mire hacia el centro */
 }
